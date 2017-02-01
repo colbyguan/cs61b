@@ -1,0 +1,324 @@
+/* The CSS from NoteHub, all wrapped with a .md selector */
+
+.md {
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  color: #333;
+  background: #fff;
+}
+.md #hero {
+  text-align: center;
+  padding-bottom: 5em;
+  padding-top: 5em;
+}
+.md .ui-border {
+  border-radius: 3px;
+  border: 1px solid #333;
+}
+.md a {
+  border-bottom: 1px dotted;
+  text-decoration: none;
+  color: #097;
+}
+.md a:hover {
+  color: #0a8;
+}
+.md a:visited {
+  color: #054;
+}
+.md #draft {
+  margin-bottom: 3em;
+}
+.md .button {
+  cursor: pointer;
+}
+.md .ui-elem {
+  background: #fff;
+  font-size: 1em;
+  opacity: 0.8;
+  padding: 0.3em;
+  border-radius: 3px;
+  font-family: sans-serif;
+  font-weight: 300;
+  border: 1px solid #333;
+}
+.md .landing-button {
+  line-height: 200%;
+  display: inline-block;
+  width: 10em;
+  white-space: nowrap;
+  border-radius: 3px;
+  border: none;
+  margin: 0.5em;
+  background: #0a6;
+  font-size: 1.5em;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: 300;
+}
+.md .landing-button.demo {
+  opacity: 0.9;
+  background: #ddd;
+  color: black !important;
+}
+.md .landing-button:hover {
+  background: #0b7;
+}
+.md .landing-button.demo:hover {
+  background: #eee;
+}
+.md footer {
+  text-align: center;
+  padding-bottom: 1em;
+  font-size: 0.8em;
+  width: 100%;
+  font-family: sans-serif;
+  font-weight: 300;
+}
+.md footer a {
+  border: none;
+}
+.md h1, .md h2, .md h3, .md h4, .md h5, .md h6 {
+  font-family: sans-serif;
+  font-weight: 400;
+}
+.md h1 {
+  font-size: 1.8em;
+}
+.md h2 {
+  font-size: 1.6em;
+  font-weight: 600;
+}
+.md h3 {
+  font-size: 1.4em;
+}
+.md h4 {
+  font-size: 1.2em;
+}
+.md h5 {
+  font-size: 1.1em;
+}
+.md h6 {
+  font-size: 1.0em;
+}
+.md #hero h1 {
+  font-size: 2.5em;
+}
+.md #hero h2 {
+  margin: 1em;
+  font-family: sans-serif;
+  font-weight: 300;
+}
+.md #dashed-line {
+  border-bottom: 1px dashed #888;
+}
+.md article {
+  text-align: justify;
+  margin-top: 3em;
+  margin-bottom: 5em;
+  font-family: sans-serif;
+  margin-right: auto;
+  margin-left: auto;
+}
+.md article img {
+  max-width: 100%;
+}
+.md article p {
+  line-height: 140%;
+  font-size: 1.05em;
+}
+.md article > h1:first-child {
+  margin: 0 0 2em;
+  font-size: 2.0em;
+  text-align: center;
+}
+.md .central-element {
+  margin-right: auto;
+  margin-left: auto;
+}
+.md blockquote {
+  font-family: Georgia, Palatino, "Palatino Linotype", serif;
+  padding-left: 1em;
+  border-left: 4px solid #097;
+}
+.md .centered {
+  text-align: center;
+}
+.md .bottom-space {
+  margin-bottom: 7em;
+}
+.md *:focus {
+  outline: 0px none transparent;
+}
+.md table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.md th {
+  background-color: #efefef;
+  line-height: 2.5em;
+  padding: 0.3em;
+}
+.md td {
+  line-height: 2.5em;
+  padding: 0.3em;
+  border-top: 1px solid #aaa;
+}
+.md .middot {
+  padding: 0.5em;
+}
+@media screen and (min-width: 1024px) {
+  .md article, .md .central-element {
+    width: 800px;
+  }
+  .md #dashed-line {
+    margin-bottom: 3em;
+    margin-top: 3em;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .md article, .md .central-element {
+    width: 90%;
+  }
+  .md #dashed-line {
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+  }
+  .md #previewPane {
+    display: none !important;
+  }
+}
+.md #previewPane article {
+  margin: 0;
+}
+.md #editContainer {
+  display: flex;
+  height: 100%;
+}
+.md #previewPane {
+  flex: 1 0 50%;
+  display: flex;
+  height: 100%;
+  overflow-y: auto;
+  margin: 0 !important;
+  border-left: 1px solid #444;
+}
+.md #previewPane article {
+  flex: 1 0;
+  padding: 2em;
+}
+.md #previewPane article h1 {
+  margin: 0;
+}
+.md #editPane {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 50%;
+  height: 100%;
+}
+.md textarea {
+  font-size: 1em;
+  font-family: Courier;
+  border-radius: 5px;
+  flex: 1 0;
+  margin: 1em;
+}
+.md textarea, .md fieldset {
+  border: none;
+}
+.md fieldset {
+  padding-left: 1em;
+  padding-right: 1em;
+  font-family: sans-serif;
+}
+.md #tableau {
+  position: relative;
+  top: 0.4em;
+  font-weight: lighter;
+  float: right;
+}
+.md #plain-password {
+  width: 10em;
+}
+.md .hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #F0F0F0;
+}
+.md .hljs,
+.md .hljs-subst {
+  color: #444;
+}
+.md .hljs-comment {
+  color: #888888;
+}
+.md .hljs-keyword,
+.md .hljs-attribute,
+.md .hljs-selector-tag,
+.md .hljs-meta-keyword,
+.md .hljs-doctag,
+.md .hljs-name {
+  font-weight: bold;
+}
+.md .hljs-type,
+.md .hljs-string,
+.md .hljs-number,
+.md .hljs-selector-id,
+.md .hljs-selector-class,
+.md .hljs-quote,
+.md .hljs-template-tag,
+.md .hljs-deletion {
+  color: #24A15E;
+}
+.md .hljs-title,
+.md .hljs-section {
+  color: #24A15E;
+  font-weight: bold;
+}
+.md .hljs-regexp,
+.md .hljs-symbol,
+.md .hljs-variable,
+.md .hljs-template-variable,
+.md .hljs-link,
+.md .hljs-selector-attr,
+.md .hljs-selector-pseudo {
+  color: #6AA6D2;
+}
+.md .hljs-literal {
+  color: #8E61DF;
+}
+.md .hljs-built_in,
+.md .hljs-bullet,
+.md .hljs-code,
+.md .hljs-addition {
+  color: #8E61DF;
+}
+.md .hljs-meta {
+  color: #1f7199;
+}
+.md .hljs-meta-string {
+  color: #4d99bf;
+}
+.md .hljs-emphasis {
+  font-style: italic;
+}
+.md .hljs-strong {
+  font-weight: bold;
+}
+.md pre, .md code, .md code.hljs {
+  font-family: monospace;
+  border-radius: 3px;
+  background: #f0f0f0;
+  font-size: 1.05em;
+}
+.md pre code {
+  font-size: 1em;
+}
+.md pre, .md code.hljs {
+  padding: 1em;
+}
