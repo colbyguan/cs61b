@@ -13,6 +13,7 @@ export default new Router({
     { path: '/dis', component: Discussion },
     { path: '/dis/:id', component: Discussion },
     { path: '/qr', component: QuickReference },
+    { path: '/qr/:id', component: QuickReference },
     { path: '/lec', component: Lecture },
     { path: '/lec/:id', component: Lecture }
   ]

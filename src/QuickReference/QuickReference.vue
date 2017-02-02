@@ -10,6 +10,7 @@
 
 <script>
 import QuickReferenceCard from './QuickReferenceCard.vue';
+import intellij from './intellij.vue';
 
 export default {
   name: 'quick-reference',
@@ -19,7 +20,8 @@ export default {
   data() {
     return {
       cards: [
-        {title: 'Git', img: 'static/img/git.png'}
+        // {title: 'Git', img: 'static/img/git.png' },
+        { title: 'Intellij', img: 'static/img/intellij.png', component: intellij, route: 'intellij' }
       ]
     }
   }

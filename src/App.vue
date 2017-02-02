@@ -5,10 +5,10 @@
         <h2 v-on:click="goHome" class="title">Colby's CS 61B Materials</h2>
       </section>
       <div class="spacer">
-        <i v-on:click="showPages = !showPages" class="fa fa-2x fa-th" aria-hidden="true">
+        <i v-on:click="showPages = !showPages; showBlurb = false" class="fa fa-2x fa-th" aria-hidden="true">
           <span class="tooltip">Menu</span>
         </i>
-        <i v-on:click="showBlurb = !showBlurb" class="fa fa-2x fa-question" aria-hidden="true">
+        <i v-on:click="showBlurb = !showBlurb; showPages = false" class="fa fa-2x fa-question" aria-hidden="true">
           <span class="tooltip">About</span>
         </i>
         <a href="http://bit.do/colby-feedback"><i class="fa fa-2x fa-commenting" aria-hidden="true">
@@ -28,6 +28,9 @@
             </p>
             <p class="q"><strong>How should I <em>not</em> use this stuff?</strong></p>
             <p>You should not be using these as a substitute for watching lectures, attending discussions, or doing labs :) . A lot of the things here are just summaries.</p>
+            <div class="row">
+              <div class="spacer">
+            </div>
           </div>
         </div>
       </transition>
@@ -67,7 +70,7 @@ export default {
       pages: [
         { title: 'Post-Discussion Notes', description: 'Things I didn\'t get to in discussion, or wanted to highlight.', color: 'red', route: 'dis', enabled: true },
         { title: 'Lecture Takeaways', description: 'Summary of things derived in lecture. I use these as a basis for discussion\'s mini-lectures', color: 'red', route: 'lec', enabled: true},
-        { title: 'Quick Reference', description: 'Pages you can keep open in the background when you do CS61B things.', color: 'yellow', route: 'qr', enabled: false },
+        { title: 'Quick Reference', description: 'Cheat sheets for: Git, Intellij, ...', color: 'yellow', route: 'qr', enabled: true },
         { title: 'Data Structure Summaries', description: 'Checklist of data structures', color: 'blue', enabled: false }
       ]
     }
