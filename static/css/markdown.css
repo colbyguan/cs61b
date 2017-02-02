@@ -127,9 +127,12 @@
 .md article img {
   max-width: 100%;
 }
-.md article p {
+.md article p, .md article ul {
   line-height: 140%;
   font-size: 1.05em;
+}
+.md ul {
+  list-style-position: outside;
 }
 .md article > h1:first-child {
   margin: 0 0 2em;

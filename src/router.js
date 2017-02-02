@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import QuickReference from './QuickReference/QuickReference.vue';
+import Lecture from './Lecture/Lecture.vue';
 import Discussion from './Discussion/Discussion.vue';
 
 Vue.use(Router);
@@ -9,8 +10,10 @@ export default new Router({
   scrollBehavior: () => ({ y: 0 }),
   routes: [
     { path: '/', component: null },
-    { path: '/discussion', component: Discussion },
-    { path: '/discussion/:id', component: Discussion },
-    { path: '/quickreference', component: QuickReference }
+    { path: '/dis', component: Discussion },
+    { path: '/dis/:id', component: Discussion },
+    { path: '/qr', component: QuickReference },
+    { path: '/lec', component: Lecture },
+    { path: '/lec/:id', component: Lecture }
   ]
 });

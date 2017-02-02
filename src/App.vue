@@ -5,9 +5,32 @@
         <h2 v-on:click="goHome" class="title">Colby's CS 61B Materials</h2>
       </section>
       <div class="spacer">
-        <i v-on:click="showPages = !showPages" class="fa fa-2x fa-th" aria-hidden="true"></i>
-        <i class="fa fa-2x fa-question" aria-hidden="true"></i>
+        <i v-on:click="showPages = !showPages" class="fa fa-2x fa-th" aria-hidden="true">
+          <span class="tooltip">Menu</span>
+        </i>
+        <i v-on:click="showBlurb = !showBlurb" class="fa fa-2x fa-question" aria-hidden="true">
+          <span class="tooltip">About</span>
+        </i>
+        <a href="http://bit.do/colby-feedback"><i class="fa fa-2x fa-commenting" aria-hidden="true">
+          <span class="tooltip">Feedback</span>
+        </i></a>
       </div>
+      <transition name="slidedown">
+        <div class="blurb" v-if="showBlurb">
+          <div class="blurb-text">
+            <p>(Spring 2017) This is a collection of materials I wrote up as an undergraduate student instructor for UC Berkeley's Data Structures and Algorithms course, CS 61B</p>
+            <p>For students:</p>
+            <p>
+            Leave me anonymous feedback about my teaching! <a href="http://bit.do/colby-feedback">bit.do/colby-feedback</a></p>
+            <p class="q"><strong>How should I use this stuff?</strong></p>
+            <p>
+              Besides hopefully helping you understand things better, you might find yourself using the materials here as a checklist for things to review for an upcoming exam, or maybe you're a graduate of 61B and need a refresher on data structures or the tools we used in labs.
+            </p>
+            <p class="q"><strong>How should I <em>not</em> use this stuff?</strong></p>
+            <p>You should not be using these as a substitute for watching lectures, attending discussions, or doing labs :) . A lot of the things here are just summaries.</p>
+          </div>
+        </div>
+      </transition>
       <transition name="slidedown">
         <div v-if="showPages" class="pages-menu">
           <div v-on:click="showingPage" class="row">
@@ -39,11 +62,12 @@ export default {
   },
   data () {
     return {
+      showBlurb: false,
       showPages: this.$route.path.length === 1,
       pages: [
-        { title: 'Post-Discussion Notes', description: 'Things I didn\'t get to in discussion', color: 'red', route: 'discussion', enabled: true},
-        { title: 'Lecture Takeaways', description: 'Summary of things derived in lecture. I use these as a basis for discussion mini-lectures', color: 'red', enabled: false },
-        { title: 'Quick Reference', description: 'Pages you can keep open in the background when you do CS61B things', color: 'yellow', route: 'quickreference', enabled: false },
+        { title: 'Post-Discussion Notes', description: 'Things I didn\'t get to in discussion, or wanted to highlight.', color: 'red', route: 'dis', enabled: true },
+        { title: 'Lecture Takeaways', description: 'Summary of things derived in lecture. I use these as a basis for discussion\'s mini-lectures', color: 'red', route: 'lec', enabled: true},
+        { title: 'Quick Reference', description: 'Pages you can keep open in the background when you do CS61B things.', color: 'yellow', route: 'qr', enabled: false },
         { title: 'Data Structure Summaries', description: 'Checklist of data structures', color: 'blue', enabled: false }
       ]
     }
@@ -64,6 +88,13 @@ export default {
 <style>
 .title {
   cursor: pointer;
+}
+.blurb-text {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.blurb .q {
+  margin-bottom: 0.8rem;
 }
 .red {
   background-color: #FB617F;
@@ -89,12 +120,43 @@ body {
   text-align: center;
   margin-bottom: 6rem;
 }
+.spacer i .tooltip {
+  visibility: hidden;
+  width: 120px;
+  background-color: transparent;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  /* Override font-awesome */
+  font-size: 2rem;
+  font-family: "Avenir", "Nunito", sans-serif;;
+
+  position: absolute;
+  z-index: 1;
+  width: 120px;
+  bottom: 100%;
+  left: 50%; 
+  margin-left: -60px;
+}
+.spacer i:hover .tooltip {
+  visibility: visible;
+}
 .spacer .fa {
   background-color: #f6f7fb;
   color: #aaa;
   margin: 15px 4px 0px;
   padding: 0 8px;
   cursor: pointer;
+  position: relative;
+}
+.spacer .fa-question {
+  bottom: 1px;
+}
+.spacer .fa-commenting {
+  bottom: 2px;
+}
+.spacer .fa:hover {
+  color: #444;
 }
 .six.columns:nth-child(odd) {
   margin-left: 0;
@@ -103,7 +165,7 @@ body {
   transform-origin: 0 -4rem;
   transition:
     opacity 0.3s ease,
-    transform 0.3s cubic-bezier(.2,.38,.72,1.3);
+    transform 0.3s cubic-bezier(.17,.67,.83,.67);
 }
 .slidedown-enter, .slidedown-leave-to {
   transform: scaleY(0);
