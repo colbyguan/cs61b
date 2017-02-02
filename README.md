@@ -1,6 +1,8 @@
 # cs61b
 
-> A Vue.js front-end for teaching materials I write throughout Spring 2017 for Berkeley's CS 61B course. See writeup.md for how I put this together!
+> A Vue.js front-end for teaching materials I write throughout Spring 2017 for Berkeley's CS 61B course. I'll soon write up how I put this website together in writeup.md!
+
+Below is stuff from `vue-cli`:
 
 ## Build Setup
 
