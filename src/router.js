@@ -10,6 +10,7 @@ export default new Router({
   routes: [
     { path: '/', component: null },
     { path: '/discussion', component: Discussion },
+    { path: '/discussion/:id', component: Discussion },
     { path: '/quickreference', component: QuickReference }
   ]
 });

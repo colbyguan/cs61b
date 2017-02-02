@@ -38,7 +38,6 @@ export default {
     PageCard
   },
   data () {
-    console.log(this.$route.path);
     return {
       showPages: this.$route.path.length === 1,
       pages: [

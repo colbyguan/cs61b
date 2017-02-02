@@ -1,5 +1,5 @@
 <template>
-    <div class="md">
+    <div id="discussion3" class="md">
     <article>
         <h1 id="week-3-post-discussion-notes">Week 3 Post-discussion Notes</h1>
     <h2 id="problem-1-2-reverse-hints">Problem 1.2: reverse() hints</h2>

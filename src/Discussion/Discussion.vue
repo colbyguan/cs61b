@@ -17,13 +17,13 @@ import discussion4 from './discussion4.vue';
 export default {
   name: 'discussion',
   components: {
-    DiscussionCard,
+    DiscussionCard
   },
   data() {
     return {
       cards: [
-        { week: 3, component: discussion3 },
-        { week: 4, component: discussion4 }
+        { week: 3, description: 'Linked Lists, Arrays', component: discussion3 },
+        { week: 4, description: 'Inheritance', component: discussion4 }
         // and here
       ]
     }
