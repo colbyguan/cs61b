@@ -23,7 +23,7 @@ export default {
   },
   data() {
     return {
-      rootRoute: '/dis/',
+      rootRoute: '/dis',
       cards: [
         { week: 3, description: 'Linked Lists, Arrays, Generics', component: discussion3 },
         { week: 4, description: 'Inheritance', component: discussion4 }

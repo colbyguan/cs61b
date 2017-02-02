@@ -47,7 +47,7 @@ export default {
   },
   methods: {
     expandCard: function() {
-      router.push(this.rootRoute + this.card.week);
+      router.push(this.rootRoute + '/' + this.card.week);
       this.showComponent = true;
     },
     collapseCard: function() {

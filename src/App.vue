@@ -63,6 +63,11 @@ export default {
   components: {
     PageCard
   },
+  mounted() {
+    if (this.$route.path.length === 0) {
+      this.showPages = true;
+    }
+  },
   data () {
     return {
       showBlurb: false,
@@ -80,8 +85,9 @@ export default {
       this.showPages = false;
     },
     goHome: function() {
-      router.push('/');
       this.showPages = true;
+      this.showBlurb = false;
+      router.push('/');
     }
   }
 
