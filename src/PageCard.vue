@@ -22,7 +22,6 @@ export default {
   methods: {
     renderPage: function(event) {
       if (this.page.enabled) {
-        console.log('from ' + this.$route.path + ' pushing ' + this.page.route);
         router.push('/' + this.page.route);
       }
     }
