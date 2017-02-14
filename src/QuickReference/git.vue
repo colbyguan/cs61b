@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bordered-code">
     <div class="row">
       <h4>Always</h4>
       <code>git status</code>

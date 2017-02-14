@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import QuickReference from './QuickReference/QuickReference.vue';
 import Lecture from './Lecture/Lecture.vue';
 import Discussion from './Discussion/Discussion.vue';
+import Practice from './Practice/Practice.vue';
 
 Vue.use(Router);
 
@@ -14,6 +15,8 @@ export default new Router({
     { path: '/qr', component: QuickReference },
     { path: '/qr/:id', component: QuickReference },
     { path: '/lec', component: Lecture },
-    { path: '/lec/:id', component: Lecture }
+    { path: '/lec/:id', component: Lecture },
+    { path: '/prac', component: Practice },
+    { path: '/prac/:id', component: Practice }
   ]
 });

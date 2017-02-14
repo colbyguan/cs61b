@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bordered-code">
     <div class="row">
       <div class="one-half column">
         <h4>Shortcuts</h4>

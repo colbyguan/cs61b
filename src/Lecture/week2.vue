@@ -1,5 +1,5 @@
 <template>
-    <div id="week2" class="md">
+    <div id="week2" class="bordered-code md">
     <article>
         <h1 id="week-2-lecture-takeaways">Week 2 Lecture Takeaways</h1>
         <h2 id="linked-lists">Linked Lists</h2>

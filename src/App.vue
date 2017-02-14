@@ -75,6 +75,7 @@ export default {
       pages: [
         { title: 'Post-Discussion Notes', description: 'Things I didn\'t get to in discussion, or wanted to highlight.', color: 'red', route: 'dis', enabled: true },
         { title: 'Lecture Takeaways', description: 'Summary of things derived in lecture. I use these as a basis for discussion\'s mini-lectures', color: 'red', route: 'lec', enabled: true},
+        { title: 'Practice Problems', description: 'Warmups problems to exam-level stuff', color: 'red', route: 'prac', enabled: true},
         { title: 'Quick Reference', description: 'Cheat sheets for: Git, Intellij, ...', color: 'yellow', route: 'qr', enabled: true },
         { title: 'Data Structure Summaries', description: 'Checklist of data structures', color: 'blue', enabled: false }
       ]
@@ -203,5 +204,19 @@ body {
 .footer-spacer {
   width: 100%;
   height: 12rem;
+}
+.bordered-code code {
+  padding: .2rem .5rem;
+  margin: 0 .2rem;
+  font-size: 90%;
+  white-space: nowrap;
+  background: #F1F1F1;
+  border: 1px solid #E1E1E1;
+  border-radius: 4px; 
+}
+.bordered-code pre > code {
+  display: block;
+  padding: 1rem 1.5rem;
+  white-space: pre;
 }
 </style>
