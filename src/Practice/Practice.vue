@@ -31,3 +31,9 @@ export default {
   }
 }
 </script>
+
+<style>
+button.button-soln {
+  width: 100%;
+}
+</style>
