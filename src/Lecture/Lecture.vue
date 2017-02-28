@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>Lecture Takeaways</h2>
-    <p>I intend for these to be a more detailed version of the "summary slides" that would go at the end of each lecture. The label "Week 3" on a card means it summarizes the Wednesday and Friday lectures of that week, along with the Monday lecture of the following week (since my discussions are on Tuesday). The corresponding discussion that I would review the topics for Week X would be Discussion X+1. </p>
+    <p>Highlighting things from lectures + additional notes and examples.</p>
     <markdown-card
       v-for="card in cards"
       :card="card"

@@ -325,3 +325,7 @@
 .md pre, .md code.hljs {
   padding: 1em;
 }
+.md h1, .md h2, .md h3, .md h4 {
+  letter-spacing: normal;
+  line-height: normal;
+}

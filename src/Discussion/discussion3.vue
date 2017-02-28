@@ -4,13 +4,13 @@
         <h1 id="week-3-post-discussion-notes">Week 3 Post-discussion Notes</h1>
     <h2 id="problem-1-2-reverse-hints">Problem 1.2: reverse() hints</h2>
     <p>Here is the hint I used for the iterative (while loop) version:<br><em>Right click -&gt; Open image in new tab, for a larger version</em> </p>
-    <p><img src="http://i.imgur.com/CMSnj90.jpg" height="600"></p>
+    <p><img src="http://i.imgur.com/oS6P8n6.jpg" height="600"></p>
     <p>Here is a hint for the recursive version. Note that you&#39;ll need a helper method that looks something like:</p>
     <pre><code><span class="hljs-function"><span class="hljs-keyword">private</span> IntNode <span class="hljs-title">reverseHelper</span><span class="hljs-params">(IntNode front)</span> </span>{
         <span class="hljs-comment">// recursive stuff here?</span>
     }
     </code></pre><p>Here&#39;s set of hints that may help you come up with your base and recursive cases: </p>
-    <p><img src="http://i.imgur.com/fSf5xXA.jpg" height="600"> </p>
+    <p><img src="http://i.imgur.com/9y0hy2V.jpg" height="600"> </p>
     <h2 id="hints-for-other-problems-spoiler-alert-">Hints for other problems (spoiler alert)</h2>
     <h3 id="2-1-array-insert">2.1: Array insert</h3>
     <p>Remember this method?</p>

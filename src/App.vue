@@ -21,7 +21,7 @@
             <p>(Spring 2017) This is a collection of materials I wrote up as an undergraduate student instructor for UC Berkeley's Data Structures and Algorithms course, CS 61B</p>
             <p>For students:</p>
             <p>
-            Leave me anonymous feedback about my teaching! <a href="http://bit.do/colby-feedback">bit.do/colby-feedback</a></p>
+            Leave me anonymous feedback about my teaching! <a href="https://goo.gl/forms/kPkZxpkxOINqPEW42">bit.do/colby-feedback</a></p>
             <p class="q"><strong>How should I use this stuff?</strong></p>
             <p>
               Besides hopefully helping you understand things better, you might find yourself using the materials here as a checklist for things to review for an upcoming exam, or maybe you're a graduate of 61B and need a refresher on data structures or the tools we used in labs.
@@ -73,11 +73,11 @@ export default {
       showBlurb: false,
       showPages: this.$route.path.length === 1,
       pages: [
-        { title: 'Post-Discussion Notes', description: 'Things I didn\'t get to in discussion, or wanted to highlight.', color: 'red', route: 'dis', enabled: true },
-        { title: 'Lecture Takeaways', description: 'Summary of things derived in lecture. I use these as a basis for discussion\'s mini-lectures', color: 'red', route: 'lec', enabled: true},
-        { title: 'Practice Problems', description: 'Warmups problems to exam-level stuff', color: 'red', route: 'prac', enabled: true},
+        { title: 'Post-Discussion Notes', description: 'Things I didn\'t get to in discussion, or wanted to highlight', color: 'red', route: 'dis', enabled: true },
+        { title: 'Lecture Takeaways', description: 'Highlighting things from lectures + additional notes and examples', color: 'red', route: 'lec', enabled: true},
+        { title: 'Practice Problems', description: 'Warmups problems to exam-level stuff', color: 'blue', route: 'prac', enabled: true},
         { title: 'Quick Reference', description: 'Cheat sheets for: Git, Intellij, ...', color: 'yellow', route: 'qr', enabled: true },
-        { title: 'Data Structure Summaries', description: 'Checklist of data structures', color: 'blue', enabled: false }
+        { title: 'Data Structure Summaries', description: 'Checklist of data structures', color: 'red', enabled: false }
       ]
     }
   },
@@ -131,7 +131,6 @@ body {
   margin-bottom: 6rem;
 }
 .spacer i .tooltip {
-  visibility: hidden;
   width: 120px;
   background-color: transparent;
   text-align: center;
@@ -148,22 +147,13 @@ body {
   left: 50%; 
   margin-left: -60px;
 }
-.spacer i:hover .tooltip {
-  visibility: visible;
-}
 .spacer .fa {
   background-color: #f6f7fb;
   color: #aaa;
-  margin: 15px 4px 0px;
+  margin: 15px 24px 0px;
   padding: 0 8px;
   cursor: pointer;
   position: relative;
-}
-.spacer .fa-question {
-  bottom: 1px;
-}
-.spacer .fa-commenting {
-  bottom: 2px;
 }
 .spacer .fa:hover {
   color: #444;
