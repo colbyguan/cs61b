@@ -13,6 +13,7 @@
 <script>
 import MarkdownCard from '../MarkdownCard.vue';
 import week2 from './week2.vue';
+import week7 from './week7.vue';
 // Import new weeks here
 
 export default {
@@ -25,6 +26,7 @@ export default {
       rootRoute: '/lec',
       cards: [
         { week: 2, description: 'Linked Lists, Arrays', component: week2},
+        { week: 7, description: 'Amortized Analysis: More Explanations', component: week7},
         // and here
       ]
     }
