@@ -60,17 +60,19 @@ So with the practical runtime being `N * constant number of operations`, we can 
 
 ### Second part:
 ```
-arr = mrpoolsort(arr); // Lets say this sort runs in Theta(N log N)
-int N = arr.length;    // Using the length of the array as our runtime variable
-for (int i = 0; i < N; i += 1) {    // Call this loop 1
-  boolean x = false;
-  for (int j = 0; j < N; j += 1) {  // Call this loop 2
-    if (i != j && arr[i] == arr[j]) {
-      x = true;
+public static boolean mystery(int[] arr) {
+  arr = mrpoolsort(arr); // Lets say this sort runs in Theta(N log N)
+  int N = arr.length;    // Using the length of the array as our runtime variable
+  for (int i = 0; i < N; i += 1) {    // Call this loop 1
+    boolean x = false;
+    for (int j = 0; j < N; j += 1) {  // Call this loop 2
+      if (i != j && arr[i] == arr[j]) {
+        x = true;
+      }
     }
-  }
-  if (!x) {
-    return false;
+    if (!x) {
+      return false;
+    }
   }
   return true;
 }
@@ -90,7 +92,7 @@ for (int i = 0; i < N; i += 1) {    // Call this loop 1
 * Immediately after the *first* loop 2 finishes, `if (!x)` will be true and the function will stop. So the runtime of loop 1 and loop 2 is `N`
 * However, we must consider the time to sort the array. Combining the runtimes, we get `N log N + N`, so `N log N` dominates the overall runtime.
 * = Ω(`N log N`)
-
+  
 ### Problem 3 (hint)
 For the "Can we do this faster?" part, what the "Does order matter here" hint is implying is to note that the array is already sorted. So you may think about how you might traverse the array in a way that *moves towards* finding elements that sum to x.
 

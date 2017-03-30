@@ -76,17 +76,19 @@
 </ol>
 <p>So with the practical runtime being <code>N * constant number of operations</code>, we can bound this to Ω(N). </p>
 <h3 id="second-part-">Second part:</h3>
-<pre><code>arr = mrpoolsort(arr); <span class="hljs-comment">// Lets say this sort runs in Theta(N log N)</span>
-<span class="hljs-keyword">int</span> N = arr.length;    <span class="hljs-comment">// Using the length of the array as our runtime variable</span>
-<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; N; i += <span class="hljs-number">1</span>) {    <span class="hljs-comment">// Call this loop 1</span>
-  <span class="hljs-keyword">boolean</span> x = <span class="hljs-keyword">false</span>;
-  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; N; j += <span class="hljs-number">1</span>) {  <span class="hljs-comment">// Call this loop 2</span>
-    <span class="hljs-keyword">if</span> (i != j &amp;&amp; arr[i] == arr[j]) {
-      x = <span class="hljs-keyword">true</span>;
+<pre><code><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">mystery</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] arr)</span> </span>{
+  arr = mrpoolsort(arr); <span class="hljs-comment">// Lets say this sort runs in Theta(N log N)</span>
+  <span class="hljs-keyword">int</span> N = arr.length;    <span class="hljs-comment">// Using the length of the array as our runtime variable</span>
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; N; i += <span class="hljs-number">1</span>) {    <span class="hljs-comment">// Call this loop 1</span>
+    <span class="hljs-keyword">boolean</span> x = <span class="hljs-keyword">false</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; N; j += <span class="hljs-number">1</span>) {  <span class="hljs-comment">// Call this loop 2</span>
+      <span class="hljs-keyword">if</span> (i != j &amp;&amp; arr[i] == arr[j]) {
+        x = <span class="hljs-keyword">true</span>;
+      }
     }
-  }
-  <span class="hljs-keyword">if</span> (!x) {
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+    <span class="hljs-keyword">if</span> (!x) {
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+    }
   }
   <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
 }

@@ -138,7 +138,7 @@ body {
   border-radius: 6px;
   /* Override font-awesome */
   font-size: 2rem;
-  font-family: "Avenir", "Nunito", sans-serif;;
+  font-family: "Avenir", "Nunito", sans-serif;
 
   position: absolute;
   z-index: 1;
