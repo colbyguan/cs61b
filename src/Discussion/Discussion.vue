@@ -14,6 +14,7 @@
 import MarkdownCard from '../MarkdownCard.vue';
 import discussion3 from './discussion3.vue';
 import discussion7 from './discussion7.vue';
+import discussion11 from './discussion11.vue';
 // Import new weeks here
 
 export default {
@@ -26,7 +27,8 @@ export default {
       rootRoute: '/dis',
       cards: [
         { week: 3, description: 'Linked Lists, Arrays, Generics', component: discussion3 },
-        { week: 7, description: 'Intro to Runtime Analysis', component: discussion7 }
+        { week: 7, description: 'Runtime Analysis Detailed Solutions', component: discussion7 },
+        { week: 11, description: 'Regex Summary', component: discussion11 },
         // and here
       ]
     }

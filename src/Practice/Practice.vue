@@ -13,6 +13,7 @@
 <script>
 import MarkdownCard from '../MarkdownCard.vue';
 import hof from './hof.vue';
+import regex from './regex.vue';
 // Import new weeks here
 
 export default {
@@ -25,6 +26,7 @@ export default {
       rootRoute: '/prac',
       cards: [
         { week: 5, description: 'Higher-Order Functions', component: hof },
+        { week: 11, description: 'Regular Expressions', component: regex },
         // and here
       ]
     }
