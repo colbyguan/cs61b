@@ -1,7 +1,8 @@
 <template>
   <div>
     <h2>Practice Problems</h2>
-    <p>Warmups problems to exam-level stuff</p>
+    <p>Warmups problems to exam-level stuff. I'm just using approximate week numbers to make programming this page easier.</p>
+
     <markdown-card
       v-for="card in cards"
       :card="card"
@@ -14,6 +15,7 @@
 import MarkdownCard from '../MarkdownCard.vue';
 import hof from './hof.vue';
 import regex from './regex.vue';
+import dsd from './dsd.vue';
 // Import new weeks here
 
 export default {
@@ -26,7 +28,8 @@ export default {
       rootRoute: '/prac',
       cards: [
         { week: 5, description: 'Higher-Order Functions', component: hof },
-        { week: 11, description: 'Regular Expressions', component: regex },
+        { week: 10, description: 'Regular Expressions', component: regex },
+        { week: 11, description: 'Applying Data Structures', component: dsd },
         // and here
       ]
     }
