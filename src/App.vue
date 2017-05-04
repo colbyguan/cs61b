@@ -15,6 +15,7 @@
           <span class="tooltip">Feedback</span>
         </i></a>
       </div>
+      <div style="text-align: center">Last updated with <a href="#" v-on:click.stop.prevent="goToUpdated">practice problems for asymptotic analysis</a></div>
       <transition name="slidedown">
         <div class="blurb" v-if="showBlurb">
           <div class="blurb-text">
@@ -89,6 +90,11 @@ export default {
       this.showPages = true;
       this.showBlurb = false;
       router.push('/');
+    },
+    goToUpdated: function() {
+      this.showPages = false;
+      this.showBlurb = false;
+      router.push('/prac/15');
     }
   }
 
