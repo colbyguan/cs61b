@@ -25,7 +25,7 @@ export default {
     return {
       rootRoute: '/lec',
       cards: [
-        { week: 2, description: 'Linked Lists, Arrays', component: week2},
+        // { week: 2, description: 'Linked Lists, Arrays', component: week2},
         { week: 7, description: 'Amortized Analysis: More Explanations', component: week7},
         // and here
       ]

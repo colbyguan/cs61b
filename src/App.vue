@@ -15,20 +15,11 @@
           <span class="tooltip">Feedback</span>
         </i></a>
       </div>
-      <div style="text-align: center">Last updated with <a href="#" v-on:click.stop.prevent="goToUpdated">practice problems for asymptotic analysis</a></div>
+      <div v-if="showPages" style="text-align: center">Last updated with <a href="#" v-on:click.stop.prevent="goToUpdated">solutions to asymptotic analysis practice</a></div>
       <transition name="slidedown">
         <div class="blurb" v-if="showBlurb">
           <div class="blurb-text">
             <p>(Spring 2017) This is a collection of materials I wrote up as an undergraduate student instructor for UC Berkeley's Data Structures and Algorithms course, CS 61B</p>
-            <p>For students:</p>
-            <p>
-            Leave me anonymous feedback about my teaching! <a href="https://goo.gl/forms/kPkZxpkxOINqPEW42">bit.do/colby-feedback</a></p>
-            <p class="q"><strong>How should I use this stuff?</strong></p>
-            <p>
-              Besides hopefully helping you understand things better, you might find yourself using the materials here as a checklist for things to review for an upcoming exam, or maybe you're a graduate of 61B and need a refresher on data structures or the tools we used in labs.
-            </p>
-            <p class="q"><strong>How should I <em>not</em> use this stuff?</strong></p>
-            <p>You should not be using these as a substitute for watching lectures, attending discussions, or doing labs :) . A lot of the things here are just summaries.</p>
             <div class="row">
               <div class="spacer">
             </div>
@@ -65,7 +56,7 @@ export default {
     PageCard
   },
   mounted() {
-    if (this.$route.path.length === 0) {
+    if (this.$route.path.length === 1) {
       this.showPages = true;
     }
   },
