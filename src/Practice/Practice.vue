@@ -16,6 +16,7 @@ import MarkdownCard from '../MarkdownCard.vue';
 import hof from './hof.vue';
 import regex from './regex.vue';
 import dsd from './dsd.vue';
+import runtimes from './runtimes.vue';
 // Import new weeks here
 
 export default {
@@ -30,6 +31,7 @@ export default {
         { week: 5, description: 'Higher-Order Functions', component: hof },
         { week: 10, description: 'Regular Expressions', component: regex },
         { week: 11, description: 'Applying Data Structures', component: dsd },
+        { week: 15, description: 'Asymptotic Analysis Review', component: runtimes},
         // and here
       ]
     }
